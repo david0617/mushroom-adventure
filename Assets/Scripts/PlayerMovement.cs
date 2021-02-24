@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
     private float jumpSpeed = 8.0F;
     private Vector3 moveDirection = Vector3.zero;
     CharacterController controller;
+    public int life;
+    public GameObject Respawn;
 
     private void Start()
     {
@@ -50,5 +52,11 @@ public class PlayerMovement : MonoBehaviour
         }
         moveDirection.y -= gravity * Time.deltaTime;
         controller.Move(moveDirection * Time.deltaTime);
+    }
+
+    public void RespawnPlayer()
+    {
+        gameObject.transform.position = Respawn.transform.position;
+        life--;
     }
 }

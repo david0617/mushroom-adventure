@@ -17,4 +17,21 @@ public class Ammo : MonoBehaviour
     {
 
     }
+
+    void OnTriggerEnter(Collider other)
+    {
+        EnemyHealth enemy = other.gameObject.GetComponent<EnemyHealth>();
+        PlayerHealth player = other.gameObject.GetComponent<PlayerHealth>();
+
+        if (enemy != null)
+        {
+            enemy.KillEnemy();
+            Destroy(gameObject);
+        }
+        else if (player == null && other != GameObject.FindGameObjectWithTag("backGround"))
+        {
+            Destroy(gameObject);
+        }
+
+    }
 }

@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - gameManager
+  - backGround
+  - Void
   layers:
   - Default
   - TransparentFX

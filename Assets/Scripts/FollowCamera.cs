@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class FollowCamera : MonoBehaviour
 {
+    private Vector3 p;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,7 +15,7 @@ public class FollowCamera : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        Vector3 p = transform.position;
+        p = transform.position;
         p.y = 5;
         transform.position = p;
     }
