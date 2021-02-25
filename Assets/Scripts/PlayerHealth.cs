@@ -9,6 +9,7 @@ public class PlayerHealth : MonoBehaviour
     public GameObject Respawn;
     public Text lifeDisplay;
     private string lifeString;
+    public int reSpawn = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -20,14 +21,27 @@ public class PlayerHealth : MonoBehaviour
     void Update()
     {
         lifeString = life.ToString();
-        lifeDisplay.text = "Life: " + lifeString; 
+        lifeDisplay.text = "Life: " + lifeString;
+
+      //  gameObject.transform.position = Respawn.transform.position;
     }
 
     public void RespawnPlayer()
     {
+        if (reSpawn > 0)
+        {
+            return;
+        }
+        reSpawn = 20;
         life--; 
-        gameObject.transform.position = Respawn.transform.position;
-        KillPlayer gameVoid = GameObject.Find("Void").GetComponent<KillPlayer>();
-        gameVoid.respawn = true;
+    }
+
+    void LateUpdate()
+    {
+        if (reSpawn > 0)
+        {
+            gameObject.transform.position = Respawn.transform.position;
+        }
+        reSpawn--;
     }
 }

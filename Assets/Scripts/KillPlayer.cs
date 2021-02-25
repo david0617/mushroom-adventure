@@ -5,7 +5,7 @@ using UnityEngine;
 public class KillPlayer : MonoBehaviour
 {
     public bool respawn = true;
-    public GameObject a;
+    public GameObject respawnPoint;
 
     // Start is called before the first frame update
     void Start()
@@ -22,10 +22,8 @@ public class KillPlayer : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         PlayerHealth player = other.GetComponent<PlayerHealth>();
-        if (player != null && respawn == true)
+        if (player != null)
         {
-            respawn = false;
-            other.transform.position = a.transform.position;
             player.RespawnPlayer();
         }
     }
