@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     private float jumpSpeed = 8.0F;
     private Vector3 moveDirection = Vector3.zero;
     CharacterController controller;
+    public GameObject playerAssets;
 
     private void Start()
     {
@@ -20,13 +21,15 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {   
-        if (Input.GetAxis("Horizontal") == 1)
+        if (Input.GetAxis("Horizontal") == 1 && right == false)
         {
             right = true;
+            playerAssets.transform.Rotate(0, 180, 0, Space.Self);
         }
-        else if (Input.GetAxis("Horizontal") == -1)
+        else if (Input.GetAxis("Horizontal") == -1 && right == true)
         {
             right = false;
+            playerAssets.transform.Rotate(0, -180, 0, Space.Self);
         }
         if (controller.isGrounded && Input.GetButton("left shift"))
         {

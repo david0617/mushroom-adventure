@@ -24,7 +24,7 @@ public class KillPlayer : MonoBehaviour
         PlayerHealth player = other.GetComponent<PlayerHealth>();
         if (player != null)
         {
-            player.RespawnPlayer();
+            player.RespawnPlayer(true);
         }
     }
 }

@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
     public int timeS, timeM;
     private string timeStringS, timeStringM;
     public Text timeDisplay;
+    public string sceneName;
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +35,12 @@ public class Timer : MonoBehaviour
             timeM--;
             timeS = 59;
         }
+
+        if (timeS == 0 && timeM == 0)
+        {
+            SceneManager.LoadScene(sceneName);
+        }
+
         StartCoroutine(Times());
     }
 }
