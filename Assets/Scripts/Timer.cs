@@ -9,7 +9,7 @@ public class Timer : MonoBehaviour
     public int timeS, timeM;
     private string timeStringS, timeStringM;
     public Text timeDisplay;
-    public string sceneName;
+    private string lastSceneName;
 
     // Start is called before the first frame update
     void Start()
@@ -38,7 +38,9 @@ public class Timer : MonoBehaviour
 
         if (timeS == 0 && timeM == 0)
         {
-            SceneManager.LoadScene(sceneName);
+            lastSceneName = SceneManager.GetActiveScene().name;
+            PlayerPrefs.SetString("lastScene", lastSceneName);
+            SceneManager.LoadScene("End");
         }
 
         StartCoroutine(Times());

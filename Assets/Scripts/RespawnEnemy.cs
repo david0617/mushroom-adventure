@@ -22,7 +22,7 @@ public class RespawnEnemy : MonoBehaviour
 
     void LateUpdate()
     {
-        if (ph.reSpawn == 0)
+        if (ph.reSpawn == 0 )
         {
             foreach (GameObject respawnPoint in enemyRespawnPoint)
             {
