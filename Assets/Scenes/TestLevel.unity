@@ -13981,6 +13981,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 884578618, guid: aebd7cf74c55fc843b266feb90195c89, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 285
+      objectReference: {fileID: 0}
+    - target: {fileID: 884578618, guid: aebd7cf74c55fc843b266feb90195c89, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 884578619, guid: aebd7cf74c55fc843b266feb90195c89, type: 3}
+      propertyPath: m_Text
+      value: Strawberries:10/10
+      objectReference: {fileID: 0}
     - target: {fileID: 2089070532403176256, guid: aebd7cf74c55fc843b266feb90195c89,
         type: 3}
       propertyPath: m_Name

@@ -19,6 +19,9 @@ public class PlayerShoot : MonoBehaviour
     {
         GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
         player = playerObj.GetComponent<PlayerMovement>();
+
+        foodString = foodCount.ToString();
+        foodDisplay.text = "Strawberries:" + foodString + "/10";
     }
 
     // Update is called once per frame
@@ -41,7 +44,7 @@ public class PlayerShoot : MonoBehaviour
             foodCount--;
 
             foodString = foodCount.ToString();
-            foodDisplay.text = "Food:" + foodString + "/10";
+            foodDisplay.text = "Strawberries:" + foodString + "/10";
         }
 
     }
@@ -73,7 +76,7 @@ public class PlayerShoot : MonoBehaviour
             }
 
             foodString = foodCount.ToString();
-            foodDisplay.text = "Food:" + foodString + "/10";
+            foodDisplay.text = "Strawberries:" + foodString + "/10";
         }
     }
 }
