@@ -7,6 +7,8 @@ public class EnemyHealth : MonoBehaviour
     public int point;
     Animation animation;
     public GameObject[] drop;
+    public GameObject dathAnimation;
+    public float time;
 
     // Start is called before the first frame update
     void Start()
@@ -18,11 +20,13 @@ public class EnemyHealth : MonoBehaviour
     {
         Destroy(gameObject);
 
-        System.Random R1 = new System.Random();
-        int x = R1.Next(0, 99);
-
         Vector3 position = gameObject.transform.position;
         position.y += 2;
+
+        Instantiate(dathAnimation, position, Quaternion.identity);
+
+        System.Random R1 = new System.Random();
+        int x = R1.Next(0, 99);
 
         Debug.Log(x);
 

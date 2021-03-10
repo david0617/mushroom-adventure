@@ -109,6 +109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   point: 50
+  effect: {fileID: 100004, guid: 3af6f68141914ca43ba39b2403757bd0, type: 3}
 --- !u!114 &835326305
 MonoBehaviour:
   m_ObjectHideFlags: 0

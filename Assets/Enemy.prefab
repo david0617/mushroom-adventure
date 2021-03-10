@@ -253,6 +253,8 @@ MonoBehaviour:
   drop:
   - {fileID: 9046935127264332369, guid: 35fc2e348af08a545a0205153abd8809, type: 3}
   - {fileID: 8000250294164538105, guid: d1782ffb81b52a1449c6fd89f8db0581, type: 3}
+  dathAnimation: {fileID: 100004, guid: 7867af58a6ec48846ae807eb4022fbaa, type: 3}
+  time: 1
 --- !u!114 &5441393344601597827
 MonoBehaviour:
   m_ObjectHideFlags: 0

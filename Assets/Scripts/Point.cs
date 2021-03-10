@@ -5,6 +5,7 @@ using UnityEngine;
 public class Point : MonoBehaviour
 {
     public int point;
+    public GameObject effect;
 
     private void Update()
     {
@@ -18,6 +19,7 @@ public class Point : MonoBehaviour
         if (pd != null)
         {
             Destroy(gameObject);
+            Instantiate(effect, gameObject.transform.position, gameObject.transform.rotation);
             pd.Add(point);
         }
     }

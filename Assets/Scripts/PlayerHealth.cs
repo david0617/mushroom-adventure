@@ -12,7 +12,7 @@ public class PlayerHealth : MonoBehaviour
     public bool isRespawn;
     private string lifeString, lastSceneName;
     public int reSpawn = 0;
-    private bool levelUp;
+    public bool levelUp;
 
     public void RespawnPlayer(bool Void)
     {

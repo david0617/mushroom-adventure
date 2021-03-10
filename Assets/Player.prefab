@@ -30,6 +30,7 @@ Transform:
   - {fileID: 6353998763006593943}
   - {fileID: 3115660249097628900}
   - {fileID: 2029453623090680832}
+  - {fileID: 4933064000231406245}
   m_Father: {fileID: 2029453622942682952}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -60,7 +61,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2029453622581617770}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 14.68, y: 0, z: 0}
+  m_LocalPosition: {x: 17, y: 5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2029453622942682952}
@@ -279,10 +280,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b89a3ab71955756498fc431c9eb4ef9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawn: {fileID: 2029453623090680835}
   ammo: {fileID: 1826823465757750169, guid: 5a50ff1e1c4d97c439021b7d87a92919, type: 3}
   strawberries: {fileID: 2607366274753898128, guid: 43800377265d5c14eb720d2585f49e19,
     type: 3}
+  spawn:
+  - {fileID: 2029453623090680835}
+  - {fileID: 2873218455894811338}
   fireingTimer: 0.75
   speed: 1500
   foodDisplay: {fileID: 0}
@@ -303,9 +306,9 @@ MonoBehaviour:
   basePlayer: {fileID: 6009526595867889965}
   levelUpPlayer: {fileID: 2339299849607099998}
   lifeDisplay: {fileID: 0}
-  sceneName: TestingRoom
   isRespawn: 0
   reSpawn: 0
+  levelUp: 0
 --- !u!114 &2029453622942682960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -343,7 +346,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2029453623090680832}
   m_Layer: 0
-  m_Name: AmmoSpawn
+  m_Name: BaseAmmoSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -362,6 +365,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4457179022877541948}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2873218455894811338
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4933064000231406245}
+  m_Layer: 0
+  m_Name: LevelUpAmmoSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4933064000231406245
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2873218455894811338}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.556, z: 0.81}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4457179022877541948}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &779348262453800858
 PrefabInstance:
