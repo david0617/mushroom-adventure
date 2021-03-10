@@ -8,6 +8,8 @@ TagManager:
   - backGround
   - Void
   - food
+  - enemy
+  - enemyRespawn
   layers:
   - Default
   - TransparentFX

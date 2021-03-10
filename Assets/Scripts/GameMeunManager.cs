@@ -17,6 +17,7 @@ public class GameMeunManager : MonoBehaviour
 
     public void StartingScene()
     {
+        PlayerPrefs.SetInt("point", 0);
         SceneManager.LoadScene(sceneName);
         Debug.Log("start");
     }

@@ -11,11 +11,13 @@ public class NextLevel : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         PlayerHealth ph = other.gameObject.GetComponent<PlayerHealth>();
+        PointDisplay pd = other.gameObject.GetComponent<PointDisplay>();
 
         if (ph != null)
         {
             lastSceneName = SceneManager.GetActiveScene().name;
             PlayerPrefs.SetString("lastScene", lastSceneName);
+            PlayerPrefs.SetInt("point", pd.point);
             SceneManager.LoadScene(sceneName);
         }
     }

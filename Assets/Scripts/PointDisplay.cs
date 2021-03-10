@@ -6,13 +6,13 @@ using UnityEngine.UI;
 public class PointDisplay : MonoBehaviour
 {
     public Text pointDisplay;
-    private int point;
+    public int point;
     private string pointString;
 
     // Start is called before the first frame update
     void Start()
     {
-        point = 0;
+        point =  PlayerPrefs.GetInt("point");
         pointString = point.ToString();
         pointDisplay.text = "point: " + pointString;
     }

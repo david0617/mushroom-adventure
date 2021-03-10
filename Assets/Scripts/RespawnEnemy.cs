@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class RespawnEnemy : MonoBehaviour
 {
-    public GameObject[] enemyRespawnPoint;
-    public GameObject enemy;
+    public GameObject enemyType;
     PlayerHealth ph;
 
     // Start is called before the first frame update
@@ -24,9 +23,17 @@ public class RespawnEnemy : MonoBehaviour
     {
         if (ph.reSpawn == 0 )
         {
+            GameObject[] enemys = GameObject.FindGameObjectsWithTag("enemy");
+            GameObject[] enemyRespawnPoint = GameObject.FindGameObjectsWithTag("enemyRespawn");
+
+            foreach (GameObject enemy in enemys)
+            {
+                Destroy(enemy);
+            }
+
             foreach (GameObject respawnPoint in enemyRespawnPoint)
             {
-                GameObject enemyObj = Instantiate(enemy, respawnPoint.transform.position, respawnPoint.transform.rotation);
+                GameObject enemyObj = Instantiate(enemyType, respawnPoint.transform.position, respawnPoint.transform.rotation);
             }
         }
     }
