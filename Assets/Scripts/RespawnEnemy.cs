@@ -31,9 +31,9 @@ public class RespawnEnemy : MonoBehaviour
                 Destroy(enemy);
             }
 
-            foreach (GameObject respawnPoint in enemyRespawnPoint)
+            foreach (GameObject enemyRespawn in enemyRespawnPoint)
             {
-                GameObject enemyObj = Instantiate(enemyType, respawnPoint.transform.position, respawnPoint.transform.rotation);
+                GameObject enemyObj = Instantiate(enemyType, enemyRespawn.transform.position, enemyRespawn.transform.rotation);
             }
         }
     }

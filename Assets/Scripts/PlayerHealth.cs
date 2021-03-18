@@ -33,7 +33,7 @@ public class PlayerHealth : MonoBehaviour
             {
                 lastSceneName = SceneManager.GetActiveScene().name;
                 PlayerPrefs.SetString("lastScene", lastSceneName);
-                SceneManager.LoadScene("End");
+                SceneManager.LoadScene("GameOver");
             }
         }
         else

@@ -5,12 +5,12 @@ using UnityEngine.UI;
 
 public class PlayerShoot : MonoBehaviour
 {
-    public GameObject ammo, strawberries;
-    public GameObject[] spawn;
-    public float fireingTimer;
-    public float speed;
+    public GameObject strawberries;
+    public GameObject[] spawn, ammo;
+    public float fireingTimer, speed;
+    public int foodBagSize;
     public Text foodDisplay;
-    private string foodString;
+    private string foodString, foodBagSizeString;
     private int foodCount = 0;
     private PlayerMovement pm;
     private PlayerHealth ph;
@@ -25,7 +25,8 @@ public class PlayerShoot : MonoBehaviour
         ph = playerObj.GetComponent<PlayerHealth>();
 
         foodString = foodCount.ToString();
-        foodDisplay.text = "Strawberries:" + foodString + "/10";
+        foodBagSizeString = foodBagSize.ToString();
+        foodDisplay.text = "Strawberries:" + foodString + "/" + foodBagSizeString;
     }
 
     // Update is called once per frame
@@ -35,11 +36,11 @@ public class PlayerShoot : MonoBehaviour
         {
             if (ph.levelUp == false)
             {
-                ShootAmmo(spawn[0]);
+                ShootAmmo(spawn[0], ammo[0]);
             }
             else if (ph.levelUp == true)
             {
-                ShootAmmo(spawn[1]);
+                ShootAmmo(spawn[1], ammo[1]);
             }
 
             StartCoroutine(FireTimer(fireingTimer));
@@ -60,12 +61,13 @@ public class PlayerShoot : MonoBehaviour
             foodCount--;
 
             foodString = foodCount.ToString();
-            foodDisplay.text = "Strawberries:" + foodString + "/10";
+
+            foodDisplay.text = "Strawberries:" + foodString + "/" + foodBagSizeString;
         }
 
     }
 
-    void ShootAmmo(GameObject side)
+    void ShootAmmo(GameObject side, GameObject ammo)
     {
         GameObject ammoObj = Instantiate(ammo, side.transform.position, gameObject.transform.rotation);
         ammoObj.GetComponent<Rigidbody>().AddForce(side.transform.forward * speed, ForceMode.Acceleration);
@@ -92,13 +94,13 @@ public class PlayerShoot : MonoBehaviour
 
             Debug.Log(foodCount);
 
-            if (foodCount > 10)
+            if (foodCount > foodBagSize)
             {
-                foodCount = 10;
+                foodCount = foodBagSize;
             }
 
             foodString = foodCount.ToString();
-            foodDisplay.text = "Strawberries:" + foodString + "/10";
+            foodDisplay.text = "Strawberries:" + foodString + "/" + foodBagSizeString;
         }
     }
 }

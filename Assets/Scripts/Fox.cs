@@ -5,18 +5,22 @@ using UnityEngine.UI;
 
 public class Fox : MonoBehaviour
 {
-    public int foodFeed = 0;
+    public int foodFeed = 0, foodNeed;
     public Text foodFeedDisplay;
     public float timer;
     public GameObject[] effect;
     public GameObject fox;
-    private string foodFeedString;
+    private string foodFeedString, foodNeedString;
     private Animator animator;
 
 
     void Start()
     {
         animator = fox.GetComponent<Animator>();
+
+        foodNeedString = foodNeed.ToString();
+        foodFeedString = foodFeed.ToString();
+        foodFeedDisplay.text = "Food Feed:" + foodFeedString + "/" + foodNeedString;
     }
 
     void OnTriggerEnter(Collider other)
@@ -29,9 +33,9 @@ public class Fox : MonoBehaviour
             foodFeed++;
 
             foodFeedString = foodFeed.ToString();
-            foodFeedDisplay.text = "Food Feed:" + foodFeedString + "/10";
+            foodFeedDisplay.text = "Food Feed:" + foodFeedString + "/" + foodNeedString;
 
-            if (foodFeed == 10)
+            if (foodFeed == foodNeed)
             {
                 StartCoroutine(time(timer));
             }

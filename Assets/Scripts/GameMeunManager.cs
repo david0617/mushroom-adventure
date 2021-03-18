@@ -36,4 +36,10 @@ public class GameMeunManager : MonoBehaviour
 
         Debug.Log("replay");
     }
+
+    public void RePlayerGame()
+    {
+        PlayerPrefs.SetInt("point", 0);
+        SceneManager.LoadScene("Start");
+    }
 }
