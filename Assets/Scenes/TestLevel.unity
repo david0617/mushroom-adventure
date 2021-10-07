@@ -13519,6 +13519,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5145989335193546168, guid: 1e9fe95eebe7ca64297c9e7fb8d06038,
         type: 3}
+      propertyPath: foodFeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5145989335193546168, guid: 1e9fe95eebe7ca64297c9e7fb8d06038,
+        type: 3}
+      propertyPath: foodNeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5145989335193546168, guid: 1e9fe95eebe7ca64297c9e7fb8d06038,
+        type: 3}
       propertyPath: foodFeedDisplay
       value: 
       objectReference: {fileID: 48136688}

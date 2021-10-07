@@ -22,10 +22,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 987
-  m_MinSize: {x: 809, y: 492}
-  m_MaxSize: {x: 22004, y: 14042}
+  m_MinSize: {x: 811, y: 492}
+  m_MaxSize: {x: 22006, y: 14042}
   vertical: 0
-  controlID: 2340
+  controlID: 5776
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -142,7 +142,7 @@ MonoBehaviour:
   m_MinSize: {x: 333, y: 492}
   m_MaxSize: {x: 14003, y: 14042}
   vertical: 1
-  controlID: 2341
+  controlID: 5777
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -207,9 +207,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -11.284731, y: 0.2533441, z: 16.485296}
+    m_Target: {x: -6.696516, y: -3.0013885, z: -9.904486}
     speed: 2
-    m_Value: {x: -11.284731, y: 0.2533441, z: 16.485296}
+    m_Value: {x: -6.696516, y: -3.0013885, z: -9.904486}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -255,13 +255,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.022156335, y: -0.6411079, z: 0.021206992, w: 0.76733434}
+    m_Target: {x: 0.06912033, y: -0.08665415, z: 0.008116468, w: 0.99419963}
     speed: 2
-    m_Value: {x: 0.0221479, y: -0.64086384, z: 0.021198917, w: 0.7670422}
+    m_Value: {x: 0.06909321, y: -0.086620145, z: 0.008113283, w: 0.9938095}
   m_Size:
-    m_Target: 14.434601
+    m_Target: 21.451189
     speed: 2
-    m_Value: 14.434601
+    m_Value: 21.451189
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -468,7 +468,7 @@ MonoBehaviour:
   m_MinSize: {x: 333, y: 271}
   m_MaxSize: {x: 14003, y: 10021}
   vertical: 0
-  controlID: 2284
+  controlID: 5778
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -535,20 +535,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Audio
+    - Assets/Scenes
   m_ViewMode: 1
   m_StartGridSize: 53
   m_LastFolders:
-  - Assets/Audio
+  - Assets/Scenes
   m_LastFoldersGridSize: 53
   m_LastProjectPath: D:\Unity Game\mushroom adventure
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 31}
-    m_SelectedIDs: a64f0000
-    m_LastClickedID: 20390
-    m_ExpandedIDs: 00000000684f00006a4f0000a24f0000b64f0000
+    scrollPos: {x: 0, y: 35}
+    m_SelectedIDs: e8350000
+    m_LastClickedID: 13800
+    m_ExpandedIDs: 00000000de350000e0350000e6350000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -576,7 +576,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000684f00006a4f0000
+    m_ExpandedIDs: 00000000de350000e0350000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -601,9 +601,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 02380000
-    m_LastClickedInstanceID: 14338
-    m_HadKeyboardFocusLastEvent: 1
+    m_SelectedInstanceIDs: 14360000
+    m_LastClickedInstanceID: 13844
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000a83e0000b68c000010440000a46b00001c63000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -738,10 +738,10 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 128}
+      scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 66fbffffea35000040370000e6370000043e0000
+      m_ExpandedIDs: da04ffff6808ffffd208fffff208fffff808ffff0009ffff720affffc822ffffe22cffffea2cffff022dffffa646fffff65effff945fffffb45fffff7460ffff7c60fffff461ffff4c7affff8484ffff8c84ffff1c85ffffbc9effff88aaffffe8abffffeeabffff0cb3ffff96b4ffff12b6ffff66fbffff06a000001aa4000014a60000e6ca0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -827,5 +827,5 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
-  m_LastInspectedObjectInstanceID: 14338
+  m_LastInspectedObjectInstanceID: 13844
   m_LastVerticalScrollValue: 0
